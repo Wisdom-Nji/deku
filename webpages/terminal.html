@@ -11,8 +11,7 @@
     <title>Terminal</title>
   </head>
   <body>
-    <div id="terminal">
-      <div class="jumbotron bg-dark" style="color: white"></div>
+    <div id="terminal" class="jumbotron bg-dark" style="color: white">
     </div><hr>
 
     <form id="gnome-terminal">
@@ -36,12 +35,20 @@
         var terminal_command = this.terminal_command.value;
         console.log(terminal_command);
 
+        var convert_to_html = function(terminal_input) {
+          return terminal_input.split("\n");
+        }
+
         var ajax = new XMLHttpRequest({mozSystem: true});
         ajax.onreadystatechange = function() {
           if(this.status == 200 && this.readyState == 4) {
             var response = JSON.parse(this.responseText);
-            var textNode = document.createTextNode(response.output);
-            document.getElementById("terminal").appendChild(textNode);
+            var html_version = convert_to_html(response.output);
+            for(var i in html_version) {
+              var p = document.createElement('p');
+              p.appendChild(document.createTextNode(html_version[i]))
+              document.getElementById("terminal").appendChild(p);
+            }
           }
         }
         ajax.open("POST", `${url}/terminal/00000/${client_id}`, true);
