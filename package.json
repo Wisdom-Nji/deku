@@ -6,6 +6,22 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC"
+  "author": "sherlock wisdom",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.0",
+    "json-socket": "^0.3.0"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Wisdom-Nji/deku.git"
+  },
+  "keywords": [
+    "web-shell"
+  ],
+  "bugs": {
+    "url": "https://github.com/Wisdom-Nji/deku/issues"
+  },
+  "homepage": "https://github.com/Wisdom-Nji/deku#readme"
 }
