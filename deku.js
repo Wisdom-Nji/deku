@@ -1,7 +1,7 @@
 const net = require('net'),JsonSocket = require('json-socket');
 const {spawnSync} = require('child_process');
 
-var host = "http://tbappbamenda.com";
+var host = "afkanerd.com";
 var socketPort = 9999;
 
 function establishServerConnection() {
