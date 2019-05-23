@@ -142,7 +142,7 @@ app.get('/sms/:information', function(req, res) {
 	res.end();
 });
 
-app.get('/socket/', function(req, res) {
+app.get('/sockets/', function(req, res) {
 	res.status(200);
 	var collection_of_clients_function = function() {
 		var collection = []
@@ -185,14 +185,15 @@ app.post('/terminal/:id/:uid', function(req, res) {
 	collection_of_client_responses[res.uid] = res;
 })
 
+var socketPort = 9999;
+var appPort = 8888;
 
-
-socketConnection.listen(6969, function() {
-	console.log(`Started SMS Gateway on port 6969`);
+socketConnection.listen(socketPort, function() {
+	console.log(`Started SMS Gateway on port ${socketPort}`);
 });
 
-app.listen(7455, function() {
-	console.log(`Started URL Router on port 7455`);
+app.listen(appPort, function() {
+	console.log(`Started URL Router on port ${appPort}`);
 });
 
 

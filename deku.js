@@ -2,9 +2,10 @@ const net = require('net'),JsonSocket = require('json-socket');
 const {spawnSync} = require('child_process');
 
 var host = "localhost";
+var socketPort = 9999;
 
 function establishServerConnection() {
-	var serverConnection = new JsonSocket(net.connect(6969, host));
+	var serverConnection = new JsonSocket(net.connect(socketPort, host));
 
 	//serverConnection.setKeepAlive(true, 2000);
 

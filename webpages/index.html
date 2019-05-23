@@ -25,7 +25,7 @@
 
     <script>
     window.onload = function() {
-      var url = "http://localhost:7455";
+      var url = "http://localhost:8888";
       var ajax = new XMLHttpRequest;
       ajax.onreadystatechange = function() {
         if(this.status == 200 && this.readyState == 4) {
@@ -44,7 +44,7 @@
         }
       }
 
-      ajax.open("GET", `${url}/socket/`, true);
+      ajax.open("GET", `${url}/sockets/`, true);
       // ajax.setRequestHeader("Content-Type", "application/json");
       ajax.send();
     }

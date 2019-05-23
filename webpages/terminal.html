@@ -30,7 +30,7 @@
 
     <script>
       document.forms['gnome-terminal'].onsubmit = function() {
-        var url = "http://localhost:7455";
+        var url = "http://localhost:8888";
         var client_id = sessionStorage.getItem("client_id");
         var terminal_command = this.terminal_command.value;
         console.log(terminal_command);
