@@ -1,0 +1,24 @@
+1. Hardware state monitor
+2. Internet state monitor
+3. Access to terminal
+
+
+#web shell
+
+
+- How it works:
+
+command from web interface is ran throught a client terminal and results follow
+everything should happen in real time or at least simulate and ssh pull
+
+
+/get
+- socket connection states
+- client connected information (id, amount, etc)
+
+/post/terminal/:id/:uid/terminal_command
+- terminal command for specific client
+
+#client identification and recognition| every client should have a unique ID
+- each machine has an ID, which is equivalent to their names
+- each client is given a UID when connected to the mother-load to keep the session loading till further reload
